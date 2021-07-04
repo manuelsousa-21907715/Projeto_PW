@@ -1,8 +1,8 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-import matplotlib as plt
-from matplotlib import pyplot as plt
+#import matplotlib.pyplot as plt
+#from django_matplotlib import pyplot as plt
 from website.forms import *
 
 from .forms import FormularioForm
@@ -92,15 +92,15 @@ def resultado_page_view(request, id):
         nota += 1
         resultadoCorrecto.append(1)
 
-    plt.style.use('fivethirtyeight')
-    dev_x = ["Certo", "Errado"]
-    dev_y = [nota, 10 - nota]
-    plt.bar(dev_x, dev_y)
-    plt.savefig('website/static/website/img/resultado.png')
+    #plt.style.use('fivethirtyeight')
+    # dev_x = ["Certo", "Errado"]
+    #dev_y = [nota, 10 - nota]
+    #plt.bar(dev_x, dev_y)
+    # plt.savefig('website/static/website/img/resultado.png')
 
     context = {
         '1': nota,
-        '2': plt,
+        #'2': plt,
         '3': resultados
     }
 
@@ -118,19 +118,19 @@ def comentario():
         elif i.comentario == "3":
             comentario[2] +=1
 
-        plt.title("Comentário geral do Website")
-        plt.xlabel('Qualidade do comentário sobre o site')
-        plt.ylabel('Número total de comentários')
-        plt.bar(["Não Satisfaz", "Médio", "Bom"], comentario)
-        plt.savefig('website/static/website/img/comentario.png')
+        # plt.title("Comentário geral do Website")
+        # plt.xlabel('Qualidade do comentário sobre o site')
+        # plt.ylabel('Número total de comentários')
+        # plt.bar(["Não Satisfaz", "Médio", "Bom"], comentario)
+        # plt.savefig('website/static/website/img/comentario.png')
 
 def comentario_page_view(request):
 
     comentario()
     context = {
-        'img': plt
+        # 'img': plt
     }
-    plt.close()
+    #plt.close()
 
     if request.method == 'POST':
         if request.POST.get('avaliacao', "0"):
@@ -139,9 +139,9 @@ def comentario_page_view(request):
             comment.save()
             comentario()
             context = {
-                'img': plt
+                #   'img': plt
             }
-            plt.close()
+            #plt.close()
 
             return render(request, 'website/comentario.html', context=context)
     else:
