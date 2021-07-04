@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Tomás martins & Manuel Sousa">
+    <meta name="Nome" content="Web.tv">
+    <meta name="description" content="Pagina inicial">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="base.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
+
+    {%block head %}
+    {% endblock %}
+
+</head>
+
+
+<body>
+
+<header id="mainHeader">
+
+        <nav>
+            <a href="{% url 'website:index' %}">
+                <h2>ELECTRO</h2>
+            </a>
+
+            <ul class="menu">
+                <li><a href="{% url 'website:index' %}" class="btn btn-outline-danger">Home</a></li>
+                <li><a href="{% url 'website:about_Us' %}" class="btn btn-outline-danger">About Us</a></li>
+                <li><a href="{% url 'website:produtos' %}" class="btn btn-outline-danger">Produtos</a>
+                    <ul>
+                        <li><a href="{% url 'website:material' %}" class="btn btn-outline-danger">Material</a></li>
+                        <li><a href="{% url 'website:alimentos' %}" class="btn btn-outline-danger">Alimentos</a></li>
+                        <li><a href="{% url 'website:talho' %}" class="btn btn-outline-danger">Talho</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'website:formulario' %}" class="btn btn-outline-danger">Formulario</a></li>
+                <li><a href="{% url 'website:galeria' %}" class="btn btn-outline-danger">Galeria</a></li>
+                <li><a href="{% url 'website:form_django' %}" class="btn btn-outline-danger">Contacto</a></li>
+                <li><a href="{% url 'website:quizz' %}" class="btn btn-outline-danger">Quizz</a></li>
+                <li><a href="{% url 'website:comentario' %}" class="btn btn-outline-danger">Comentário</a></li>
+                <li><a href="{% url 'website:single_page' %}" class="btn btn-outline-danger">JavaScript</a></li>
+
+
+
+            </ul>
+
+        </nav>
+
+
+    </header>
+
+
+
+<main>
+
+    {% block main %}
+
+    {% endblock %}
+</main>
+
+
+
+<footer id="pageFooter">
+            <h2 class="leftCol">Electro</h2>
+            <a class="rightCol" href="#mainHeader">Voltar ao topo</a>
+    </footer>
+
+</body>
+
+</html>

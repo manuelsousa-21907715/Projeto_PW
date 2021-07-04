@@ -1,0 +1,24 @@
+{% extends 'website/base.html' %}
+
+
+
+
+
+<main>
+
+ {% block main %}
+
+
+        <h1 class="novidades">Produtos</h1>
+        <div class="flex-container-produtos">
+            <div class="text-centered">Alimentos</div>
+            <div class="text-left">Material</div>
+            <div class="text-right">Talho</div>
+            <a href ="{% url 'website:material' %}"><img class="fig" src="../static/website/img/Produtos.jpg" alt=""></a>
+            <a href ="{% url 'website:alimentos' %}"><img class="fig" src="../static/website/img/Alimentos.jpg" alt=""></a>
+            <a href ="{% url 'website:talho' %}"><img class="fig" src="../static/website/img/Carne.jpg" alt=""></a>
+          </div>
+
+    {% endblock %}
+
+    </main>

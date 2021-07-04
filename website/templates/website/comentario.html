@@ -1,0 +1,37 @@
+{% extends 'website/base.html' %}
+
+<main>
+
+{% block main %}
+
+
+<section class="formulario">
+
+<form method="POST">
+  <h1>Comentario</h1>
+
+    <fieldset>
+      <legend>Comentarios:</legend>
+        {% csrf_token %}
+
+      <input type="radio" id="red" name='comentario' value='1' />
+      <label for="red" title="text">Não Satisfaz</label>
+      <input type="radio" id="yellow" name='comentario' value='2' />
+      <label for="yellow" title="text">Médio</label>
+      <input type="radio" id="green" name='comentario' value='3' />
+      <label for="green" title="text">Bom</label>
+      <br>
+      <input type="submit" value="Submit">
+      <br>
+      <br>
+      {%  load static %}
+            <img src="{%  static 'website/img/comentario.png' %}">
+    </fieldset>
+  </form>
+
+</section>
+
+
+{% endblock %}
+
+</main>

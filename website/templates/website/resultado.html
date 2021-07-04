@@ -1,0 +1,27 @@
+{% extends 'website/base.html' %}
+
+<main>
+
+{% block main %}
+
+
+<section class="formulario">
+
+<form action="" method="POST">
+  <h1> Resultado quizz </h1>
+
+    <fieldset>
+      <legend>Resultado quizz:</legend>
+      <br><br>
+
+      {%  load static %}
+            <img src="{%  static 'website/img/resultado.png' %}">
+    </fieldset>
+  </form>
+
+</section>
+
+
+{% endblock %}
+
+</main>

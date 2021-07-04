@@ -1,0 +1,94 @@
+{% extends 'website/base.html' %}
+
+
+<main>
+
+    {% block main %}
+
+
+
+
+        <section class="formulario">
+
+            <form method="POST" action="mailto:xxx@gmail.com">
+
+
+                <h1>FORMULÁRIO</h1>
+                <fieldset>
+
+                    <legend> Avaliação de Dados</legend>
+
+                    <label for="name">Nome: </label>
+                    <input type="text" id="name" placeholder="Nome" name="name"><br>
+
+                    <label for="datemin">Data de Nascimento</label>
+                    <input type="date" id="datemin" name="date">
+
+
+                    <p>Género:</p>
+                    <input type="radio" id="male" name="nome" value="Rapaz">
+                    <label for="male">Rapaz</label><br>
+                    <input type="radio" id="female" name="nome" value="Rapariga">
+                    <label for="female">Rapariga</label><br>
+                    <input type="radio" id="other" name="nome" value="Outro">
+                    <label for="other">Outro</label><br>
+
+
+                    <p>Achou este Website facil de navegar e compreender?</p>
+                    <input type="radio" id="sim" name="nome" value="sim">
+                    <label for="sim">Sim</label><br>
+                    <input type="radio" id="Nao" name="nome" value="Não">
+                    <label for="Nao">Não</label><br>
+
+                    <p>Escreva uma pequena frase acerca deste Website:</p>
+                    <label for="fname">Frase:</label>
+                    <input type="text" id="fname" name="name"><br>
+
+
+
+                    <p>Preencha as caixinhas das páginas que gostou mais:</p>
+                    <input type="checkbox" id="Home" name="nome" value="Home">
+                    <label for="Home">Home</label><br>
+                    <input type="checkbox" id="About Us" name="nome" value="About Us">
+                    <label for="About Us">About Us</label><br>
+                    <input type="checkbox" id="Products" name="nome" value="Products">
+                    <label for="Products">Products</label><br>
+                    <input type="checkbox" id="Galeria" name="nome" value="Galeria">
+                    <label for="Galeria">Galeria</label><br>
+                    <input type="checkbox" id="Formulario" name="nome" value="Formulario">
+                    <label for="Formulario">Formulário</label><br>
+
+
+                    <p>O quão bom é este site:</p>
+                    <input type="radio" id="Muito Mau" name="nome" value="muito mau">
+                    <label for="Muito Mau">Muito Mau</label><br>
+                    <input type="radio" id="Mau" name="nome" value="mau">
+                    <label for="Mau">Mau</label><br>
+                    <input type="radio" id="Satisfaz" name="nome" value="Satisfaz">
+                    <label for="Satisfaz"> Satisfaz</label><br>
+                    <input type="radio" id="Bom" name="nome" value="Bom">
+                    <label for="Bom">Bom</label><br>
+                    <input type="radio" id="Muito bom" name="nome" value="Muito bom">
+                    <label for="Muito bom">Muito Bom</label><br>
+
+
+                    <p>Quanto tempo demorou para preencher este Formulário?</p>
+                    <label for="appt">Select a time:</label>
+                     <input type="time" id="appt" name="appt"><br>
+
+                    <p>Escreva alguma Sugestão para a melhoria do Website:</p>
+                     <textarea class="comentario"  name="mensagem" rows="8" cols="50" placeholder="Escreva aqui alguma sugestão..."></textarea> <br>
+
+
+                    <input type="submit" value="enviar email">
+                </fieldset>
+
+
+            </form>
+
+        </section>
+        <br><br><br><br><br><br><br><br><br>
+
+     {% endblock %}
+
+    </main>

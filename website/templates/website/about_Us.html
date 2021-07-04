@@ -1,0 +1,203 @@
+{% extends 'website/base.html' %}
+
+
+ <main>
+
+     {% block main %}
+
+       <div class="container">
+
+
+        <section class="sec">
+            <h1>About Us</h1>
+            <h3>Aqui falamos sobre este Website</h3>
+            <p>Esta é a página fala acerca de todas as técnicas usadas neste Website através
+              de tabelas e videos. Mostramos tambem um Mapa do Website com expansão completa do menu e todos submenus e tambem uma imagem com
+              os layout responsivos para pc e mobile, e por fim um video a mostrar todos os detalhes e técnicas usadas por nós.
+            </p>
+
+
+              <h2 class="tecnicas">Técnicas usadas</h2>
+            <table class="content-table">
+                <thead>
+                  <tr>
+                    <th>Carateristicas</th>
+                    <th>Elementos/Técnicas</th>
+                    <th>Exemplos</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Layouts</td>
+                    <td>Usou-se o CSS grid e CSS flexbox para construção de layouts</td>
+                    <td>Usou-se CSS grid: a fazer o layout da página principal e tambem para posicionar as imagens nas novidades. <br>
+                        Usou-se CSS flex: no menu navegação e para posicionar imagem de fundo na sec principal do home e para fazer o formulário.
+
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>Responsividade</td>
+                    <td>Foram usadas media queries que adaptam o layout para telemovel e PC consoante o tamanho da janela do browser</td>
+                    <td>Usamos os media queries no display grid para modificar o nosso layout consoante o tamanho da página para que o site se torne responsivo.</td>
+
+                  </tr>
+                  <tr>
+                    <td>Seletores</td>
+                    <td>Foram usados seletores Universal, tipo, classe, id, pseudo-classe, pseudo-elemento</td>
+                    <td> Estes selectores serviram para mudar o tipo de letra (universal), para mudar as cores ou backgrounds (tipo),
+                      para modificar através do css coisas no site(classe), para modificar coisas unicas no site(id),
+                      e para embelezar utilizando a propriedade hover(pseudo-classe).
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>Etiquetas</td>
+                    <td>HTML5 main, header, body, head, nav, footer, figure, section, figure, figcaption, img, table, from, fieldset, iframe, legend.</td>
+                    <td>Usamos o HTML5 main, header, body, head, nav, figure, section, footer em todas as páginas. <br>
+                        Usamos article figure, figcaption, img em páginas com imagens <br>
+                        Usamos table na página About Us. <br>
+                        Usamos fieldset, iframe, legend para o Formulário.
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>Animações</td>
+                    <td>Foram feitas animações usando keyframes para a página da galeria</td>
+                    <td>A primeira (wave) animação faz com que 2 imagens estejam sempre a abanar e a outra animação (color) faz com que
+                      as bordas das imagens estejam a mudar de cor constantemente.
+                    </td>
+
+                  </tr>
+
+
+                 <tr>
+                    <td>Django</td>
+                    <td>Usámos o django como framework para criar uma base de dados do website</td>
+                    <td>Usámos em todas as páginas com um template base extendendo para as outras paginas, guardámos
+                    o login e a password, todas as respostas ao quizz, e tambem os comentarios na base de dados</td>
+
+                  </tr>
+
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Usámos o javaScript para criar a singlePage e criámos manipulações DOM com JavaScript</td>
+                    <td>Quando o utilizador clica num dos 3 botões inicias passa a mostrar 1 dos div's escondidos e aparece mais
+                    1 botão que serve para modificar os aspectos da imagem</td>
+
+                  </tr>
+
+                <tr>
+                    <td>GitHub</td>
+                    <td>Usámos para partilhar o codigo entre e para fazer ligação com o Heroku</td>
+                    <td>submissão do projecto para avaliação e para meter no Heroku</td>
+
+                  </tr>
+
+                <tr>
+                    <td>Heroku</td>
+                    <td>Usámos o deploy do Heroku</td>
+                    <td>Usámos o Heroku para meter o website online</td>
+
+                  </tr>
+
+
+
+
+                </tbody>
+              </table>
+
+              <h2 class="inv">Tabela de inventário</h2>
+
+              <table class="content-table2">
+                <thead>
+                  <tr>
+                    <th>Designação</th>
+                    <th>Nrº Carateristicas</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Páginas</td>
+                    <td>15</td>
+
+                  </tr>
+                  <tr>
+                    <td>Imagens</td>
+                    <td>43</td>
+
+                  </tr>
+                  <tr>
+                    <td>Links Externos</td>
+                    <td>9</td>
+
+                  </tr>
+                  <tr>
+                    <td>Videos</td>
+                    <td>1</td>
+
+                  </tr>
+                  <tr>
+                    <td>Animações</td>
+                    <td>2</td>
+
+                  </tr>
+
+
+
+
+                </tbody>
+              </table>
+
+                     <h2 class="word">WordCloud</h2>
+
+
+
+              <svg version="1.1" width="350px" height="350px" class="center">
+                <image href="../static/website/img/wordcloud.jpg" width="100%" height="100%" />
+                <a href="index.html">
+                  <polygon opacity="0.3" points="115,137 98,150 33,90 60,70" />
+                </a>
+                <a href="formulario.html">
+                  <polygon opacity="0.3" points="260,260 245,275 130,160 160,150" />
+                </a>
+                <a href="galeria.html">
+                  <polygon opacity="0.3" points="280,230 270,250 180,160 200,150" />
+                </a>
+                <a href="produtos.html">
+                  <polygon opacity="0.3" points="50,240 150,150 130,135 30,220" />
+                </a>
+                <a href="about_Us.html">
+                  <polygon opacity="0.3" points="240,180 335,90 310,80 225,160" />
+                </a>
+
+
+              </svg>
+
+              <h2 class="layout">Layout</h2>
+
+              <figure>
+                <img class="lay" src="../static/website/img/layout.png" alt="layout">
+              </figure>
+
+              <h2 class="layout">Mapa do Website</h2>
+
+              <figure>
+                <img class="lay2" src="../static/website/img/mapa.png" alt="layout">
+              </figure>
+
+
+
+
+
+              <iframe class="video" width="700" height="450" src="https://www.youtube.com/embed/E4YOz6HItTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </section>
+
+    </div>
+
+     {% endblock main %}
+
+    </main>

@@ -1,0 +1,22 @@
+{% extends 'website/base.html' %}
+
+
+{% block main %}
+
+    <section class="editar">
+
+    <h1 class="new_contact">New Contact</h1>
+
+
+        <form method="POST" action="{% url 'website:editar' contact_id %}">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+        <input type="submit" value="Gravar" class="botao_gravar">
+        <a href="{% url 'website:form_django' %}" role="button" class="btn btn-warning">Cancelar</a>
+
+    <a href="{% url 'website:apagar' contact_id %}" role="button" class="btn btn-danger">Apagar</a>
+        </form>
+
+    </section>
+{% endblock %}

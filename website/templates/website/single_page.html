@@ -1,0 +1,47 @@
+{% extends 'website/base.html' %}
+
+
+{% block head %}
+    {% load static %}
+    <script src="{% static 'website/javascript/java.js' %}"></script>
+{% endblock %}
+
+</script>
+
+</body>
+
+
+<main>
+
+{% block main %}
+
+    <br>
+    <button class="thisButton" data-page="page1">Material</button>
+    <button class="thisButton2" data-page="page2">Alimentos</button>
+    <button class="thisButton3" data-page="page3">Produtos</button>
+
+    <div id="page1" style="display:none">
+        <h1>Produto</h1>
+        <img src="../static/website/img/mat1.jpg" id="img" alt="" style="height:400px;witdh:400px;">
+        <br><br><br>
+        <button onclick="gray()">Gray</button>
+    </div>
+
+    <div id="page2" style="display:none">
+        <h1>Alimento</h1>
+        <img src="../static/website/img/ali1.jpg" id="img2" alt="" style="height:400px;witdh:400px;">
+        <br><br><br>
+        <button onclick="gray2()">Gray</button>
+    </div>
+
+    <div id="page3" style="display:none">
+        <h1>Carne</h1>
+        <img src="../static/website/img/carne1.jpg" id="img3" alt="" style="height:400px;witdh:400px;">
+        <br><br><br>
+        <button onclick="gray3()">Gray</button>
+    </div>
+
+
+{% endblock %}
+
+</main>

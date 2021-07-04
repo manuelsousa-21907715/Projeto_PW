@@ -1,0 +1,27 @@
+{% extends 'website/base.html' %}
+
+
+<main>
+
+    {% block main %}
+
+        <section class="contacto">
+
+<h1 class="nome_contact">Contacts</h1>
+
+        {% for contact in website %}
+
+             <p>{{ contact.nome }}</p>
+
+
+<a href="{% url 'website:editar' contact.id %}" class="botao_editar">Editar</a>
+
+        {% endfor %}
+<br><br>
+<a href="{% url 'website:add' %}" class="botao_novo_contact">Novo Contacto</a>
+
+
+    {% endblock %}
+</section>
+
+</main>

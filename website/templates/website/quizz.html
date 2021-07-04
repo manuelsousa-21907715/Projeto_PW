@@ -1,0 +1,28 @@
+{% extends 'website/base.html' %}
+
+<main>
+
+{% block main %}
+
+
+<section class="formulario">
+
+<form method="POST">
+  <h1>Quizz</h1>
+
+    <fieldset>
+      <legend>Quizz:</legend>
+     {% csrf_token %}
+      {{ resultados.as_p }}
+      <br><br>
+
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+
+</section>
+
+
+{% endblock %}
+
+</main>

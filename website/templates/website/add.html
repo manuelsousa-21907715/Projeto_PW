@@ -1,0 +1,19 @@
+{% extends 'website/base.html' %}
+
+
+{% block main %}
+
+    <section class="adicionar">
+    <h1 class="add_cont">New Contact</h1>
+
+
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+        <input type="submit" value="Gravar">
+        <a class="botao_cancelar"  href="{% url 'website:form_django' %}" >Cancelar</a>
+
+        </form>
+    </section>
+{% endblock %}
